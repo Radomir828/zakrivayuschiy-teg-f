@@ -12,3 +12,129 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+
+@keyframes pointer {
+  from {
+    transform: translateX(-25px);
+  }
+  to {
+    transform: translateX(-29px);
+  }
+}
+
+.card__icon-button {
+  --border-color: transparent;
+  border: 2px solid var(--border-color);
+  padding: 0;
+  max-block-size: 38px;
+  background-color: transparent;
+  transition: border 0.3s ease;
+  cursor: pointer;
+}
+
+.card__icon-button:focus,
+.card__icon-button:focus-visible {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  --border-color: var(--text-color);
+}
+
+.like-icon {
+  width: 39px;
+  height: 36px;
+}
+
+.sparks {
+  opacity: 0;
+}
+
+.core {
+  fill: transparent;
+  transition: fill 0.3s linear 0.03s;
+}
+
+.main-body {
+  fill: transparent;
+  transition: fill 0.3s linear;
+}
+
+.contour {
+  fill: var(--heart-contour-color);
+  transition: fill 0.1s linear;
+}
+
+/* :hover  */
+.like-icon:hover .heart .core {
+  fill: var(--text-color);
+  transition: fill 0.3s linear;
+}
+
+.like-icon:hover .heart .main-body {
+  fill: var(--text-color);
+  transition: fill 0.3s linear 0.05s;
+}
+
+/* :active  */
+.like-icon:active .heart .core {
+  fill: red;
+  transition: fill 0.3s linear;
+}
+
+.like-icon:active .heart .main-body {
+  fill: red;
+  transition: fill 0.3s linear 0.05s;
+}
+
+/* нажатие кнопки */
+.like-icon.is-liked .heart .core {
+  fill: red;
+  transition: fill 0.3s linear;
+}
+
+.like-icon.is-liked .heart .main-body {
+  fill: red;
+  transition: fill 0.3s linear 0.05s;
+}
+
+.like-icon.is-liked .heart .contour {
+  fill: red;
+  transition: fill 0.3s linear 0.06s;
+}
+
+.like-icon.is-liked .heart {
+  animation: scale-heart 0.3s ease-in 0.1s 1 alternate;
+  transform-origin: center;
+}
+
+.like-icon.is-liked .sparks {
+  animation: sparks-animation 0.3s ease-in 0.03s 1 alternate;
+}
+
+@keyframes scale-heart {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes sparks-animation {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

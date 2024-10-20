@@ -1,1 +1,23 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
+/* В качестве основной темы берем светлую. */
+:root {
+  --font-inter: "Inter-Variable", sans-sarif;
+  --font-press-start: "PressStart2P", monospace;
+
+  --card-title-weight: 700;
+  --card-text-weight: 400;
+
+  --background-image: url(../images/cover-image-light.png);
+  --background-color: #ffffff;
+  --text-color: #000000;
+
+  --gradient-primary-color: #d3d3d3;
+  --gradient-start-color: #e7e7e7;
+  --gradient-end-color: #1a1a1a;
+
+  --button-text-color: #fff;
+
+  --heart-contour-color: #000;
+  --heart-sparks-color: red;
+}

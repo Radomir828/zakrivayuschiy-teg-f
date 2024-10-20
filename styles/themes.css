@@ -4,3 +4,55 @@
 ✦ theme-light — класс светлой темы
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
+.theme-light {
+  --card-title-weight: 700;
+  --card-text-weight: 400;
+
+  --background-image: url(../images/cover-image-light.png);
+  --background-color: #ffffff;
+  --text-color: #000000;
+
+  --gradient-primary-color: #d3d3d3;
+  --gradient-start-color: #e7e7e7;
+  --gradient-end-color: #1a1a1a;
+
+  --button-text-color: #fff;
+
+  --heart-contour-color: #000;
+}
+
+:root.theme-dark {
+  --card-title-weight: 785;
+  --card-text-weight: 465;
+
+  --background-image: url(../images/cover-image-dark.png);
+  --background-color: #000000;
+  --text-color: #00cc14;
+
+  --gradient-primary-color: #000;
+  --gradient-start-color: #007f0c;
+  --gradient-end-color: #004306;
+
+  --button-text-color: #00cc14;
+
+  --heart-contour-color: #00cc14;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --card-title-weight: 785;
+    --card-text-weight: 465;
+
+    --background-image: url(../images/cover-image-dark.png);
+    --background-color: #000000;
+    --text-color: #00cc14;
+
+    --gradient-primary-color: #000;
+    --gradient-start-color: #007f0c;
+    --gradient-end-color: #004306;
+
+    --button-text-color: #00cc14;
+
+    --heart-contour-color: #00cc14;
+  }
+}
