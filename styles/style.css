@@ -33,8 +33,7 @@
       to bottom,
       var(--gradient-start-color) 0.01%,
       var(--gradient-end-color) 100%
-    ),
-    var(--background-image);
+    );
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -42,7 +41,7 @@
   background-color: var(--background-color);
 
   font-family: var(--font-inter);
-  font-variation-settings: "wgth" var(--card-text-weight);
+  font-variation-settings: "wght" var(--card-text-weight);
   color: var(--text-color);
 }
 
@@ -139,20 +138,22 @@
   display: flex;
   flex-direction: column;
   gap: 50px;
-  background-color: var(--background-color);
+  background-color: transparent;
 }
 
 .article {
   display: flex;
   flex-direction: column;
   border: 2px solid var(--text-color);
+  background-color: var(--background-color);
 }
 
 .article__title {
   border-bottom: 2px solid var(--text-color);
   padding: 4px 10px 5.5px;
   font-size: 18px;
-  font-weight: 700;
+  font-variation-settings: "wght" var(--card-title-weight);
+  /* font-weight: var(--card-title-weight); */
   line-height: 21.7px;
 }
 
