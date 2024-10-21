@@ -253,13 +253,13 @@
   background-color: var(--background-color);
 }
 
-/* для общих свойств кнопок "Like" и "Сохранить" */
-.buttons__like-save {
+/* для эфектов кнопок "Like" и "Сохранить" */
+.button__effects {
   position: relative;
   transition: box-shadow 0.3s ease;
   cursor: pointer;
 }
-.buttons__like-save::after {
+.button__effects::after {
   content: "";
   position: absolute;
   top: 0;
@@ -272,15 +272,15 @@
   transition: transform 0.5s ease-in-out;
 }
 
-.buttons__like-save:hover::after {
+.button__effects:hover::after {
   transform: scaleX(1);
 }
 
-.buttons__like-save:focus {
+.button__effects:focus {
   outline: none;
 }
 
-.buttons__like-save:focus-visible {
+.button__effects:focus-visible {
   outline: none;
   box-shadow: 2px 2px 0 var(--text-color);
 }
