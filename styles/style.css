@@ -64,6 +64,11 @@
   text-decoration: none;
 }
 
+.logo:focus,
+.logo:focus-visible {
+  outline: none;
+}
+
 .title {
   margin: 20px 0 25px;
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
@@ -195,14 +200,13 @@
 }
 
 .article__content {
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
   border-top: 2px solid var(--text-color);
   padding: 25px;
   line-height: 21px;
   font-size: 18px;
-}
-
-.article__content__personal-text {
-  margin-top: 27px;
 }
 
 .buttons-container {
@@ -238,7 +242,7 @@
 .footer {
   display: flex;
   justify-content: center;
-  padding: 50px 0 100px;
+  padding-bottom: 100px;
 }
 
 .footer__button {

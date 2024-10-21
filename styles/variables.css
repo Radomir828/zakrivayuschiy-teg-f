@@ -3,7 +3,7 @@
 /* В качестве основной темы берем светлую. */
 :root {
   --font-inter: "Inter-Variable", sans-sarif;
-  --font-press-start: "PressStart2P", monospace;
+  --font-press-start: "PressStart2P", fantasy;
 
   --card-title-weight: 700;
   --card-text-weight: 400;
